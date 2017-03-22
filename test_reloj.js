@@ -1,17 +1,24 @@
-var clock = require("./hereda_event.js")
+
+//este script utiliza la clase creada en el archivo event_emitter.js
+var Reloj = require("./event_emitter.js");
 
 var segundos = 0;
 
-//se instancia la clase Reloj
+var relojito = new Reloj();
 
-var reloj = new Reloj();
+//listeners-------------------------------
 
-//listeners 
-
-reloj.on("tick-tock",function(){
-
+relojito.on('tick-tock', function() {
 	segundos += 1;
-
 	console.log(segundos)
-})
+	if (segundos == 5) {
+		// se detiene el proceso con el objeto process
+		process.exit();
+	}
+});
 
+//solo pasa la primera vez que se emite este 
+//evento
+relojito.once('tick-tock', function(){
+	console.log("Primer segundo!")
+})
