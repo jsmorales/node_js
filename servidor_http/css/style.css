@@ -1,0 +1,12 @@
+.titulo {
+	text-align: center;
+    color: green;
+}
+
+.imgTitulo{
+	display: block;
+    max-width: 20%;
+    max-height: 50%;
+    text-align: center;
+    margin: auto;
+}
