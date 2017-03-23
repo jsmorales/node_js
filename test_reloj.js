@@ -1,3 +1,4 @@
+
 //este script utiliza la clase creada en el archivo event_emitter.js
 var Reloj = require("./event_emitter.js");
 
